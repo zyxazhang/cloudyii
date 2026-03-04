@@ -1,0 +1,25 @@
+# 表示根目录的 .editorconfig 文件，停止向上查找
+root = true
+
+# 匹配所有文件
+[*]
+# 缩进风格：空格（替代 tab）
+indent_style = space
+# 缩进大小：4 个空格
+indent_size = 4
+# 单行最大字符数：160（超过则换行）
+max_line_length = 160
+# 换行符：Unix/Linux 风格（\n），Windows 也兼容
+end_of_line = lf
+# 文件编码：UTF-8
+charset = utf-8
+# 移除行尾多余空格
+trim_trailing_whitespace = true
+# 文件末尾强制保留一个空行
+insert_final_newline = true
+
+# 针对部分特殊文件的补充配置（可选）
+[*.md]
+# Markdown 文件通常不强制换行（避免格式错乱），可根据需求调整
+max_line_length = off
+trim_trailing_whitespace = false
