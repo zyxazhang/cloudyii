@@ -1,0 +1,35 @@
+// 引入主题样式
+@use './themes/index';
+
+// 全局通用样式（使用 CSS 变量）
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 1400px;
+    background: var(--color-theme-bg);
+    transition: all 0.3s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100%;
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+// 示例组件样式（使用 SCSS + CSS 变量）
+.btn {
+    padding: 8px 16px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

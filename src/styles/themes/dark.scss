@@ -1,0 +1,10 @@
+// 暗黑主题变量（通过类名隔离）
+:root.dark {
+    --color-primary: #409eff;
+    --color-secondary: #67c23a;
+    --color-text: #303133;
+    --color-bg: #ffffff;
+    --color-border: #e5e7eb;
+    // 主题背景
+    --color-theme-bg: linear-gradient(135deg, #FFFDF9 0%, #e1e9ff 50%, #e8f2ff 100%);
+}
