@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import '@/styles/reset.css'
 import '@/styles/custom.css'
+import '@/assets/iconfont/iconfont.css'
 import { initTheme } from '@/utils/theme'
 
 // 初始化主题

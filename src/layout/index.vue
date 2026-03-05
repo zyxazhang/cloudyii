@@ -2,8 +2,10 @@
     <main class="layout-container">
         <header class="layout-header glass-card">
             <div class="logo">
-                <div class="logo-image"></div>
-                <span class="logo-text">云依~</span>
+                <div class="logo-image">
+                    <span class="cloudyii icon-aixin"></span>
+                </div>
+                <span class="logo-text">云依</span>
             </div>
             <nav class="nav-list">
                 <li class="nav-item" v-for="nav in navList" :key="nav.key">
@@ -13,7 +15,7 @@
             <div class="right-func">
                 <div class="search">
                     <input class="search-input" type="text" placeholder="搜索点什么..." />
-                    <span class="search-icon">🔍</span>
+                    <span class="cloudyii search-icon icon-sousuo"></span>
                 </div>
                 <div class="login">登录</div>
             </div>
@@ -45,9 +47,8 @@ const navList = ref([
         width: 1376px;
         height: 74px;
         margin: 0 auto;
-        background-color: #fff;
         position: sticky;
-        top: 20px;
+        top: 2rem;
         border-radius: 1.5rem;
         padding: 1rem 2rem;
         display: flex;
@@ -64,6 +65,11 @@ const navList = ref([
                 height: 2.5rem;
                 background-color: rgb(255 236 242 / var(--tw-bg-opacity, 1));
                 border-radius: 50%;
+                line-height: 2.5rem;
+                text-align: center;
+                .icon-aixin {
+                    font-size: 1.2rem;
+                }
             }
             .logo-text {
                 font-size: 1.5rem;
@@ -117,7 +123,7 @@ const navList = ref([
                     top: 0;
                     right: 0;
                     height: 2.5rem;
-                    border: 2px solid #e5e7eb;
+                    border: 2px solid #e5e7eb4f;
                     border-radius: 1.25rem;
                     padding: 0 1rem;
                     transition: all 300ms;
@@ -133,18 +139,25 @@ const navList = ref([
                 }
                 .search-icon {
                     position: absolute;
-                    top: 0.5rem;
-                    right: 0.5rem;
+                    top: 0.8rem;
+                    right: 0.8rem;
                 }
             }
             .login {
                 width: 80px;
                 height: 2.5rem;
                 border-radius: 1.25rem;
-                background-color: #ffb7ce;
+                background-color: #ffecf2;
                 text-align: center;
                 line-height: 2.5rem;
-                color: #ffffff;
+                color: #ffb7ce;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s;
+                &:hover {
+                    background: #ffb7ce;
+                    color: #fff;
+                }
             }
         }
     }
