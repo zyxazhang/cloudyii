@@ -1,0 +1,60 @@
+.el-divider {
+    margin: 10px 0 !important;
+}
+.el-divider--vertical {
+    margin: 0 10px !important;
+}
+
+/* 仅作用于 class 为 scroll-box 的容器 */
+.scroll-box {
+    overflow: auto; /* 必须开启 overflow: auto/scroll，否则滚动条不渲染 */
+}
+
+.scroll-box::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+.scroll-box::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 3.5px;
+}
+.scroll-box::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3.5px;
+}
+.scroll-box::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.empty {
+    flex: 1;
+}
+
+.text-ellipsis-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.text-ellipsis-2 {
+    overflow: hidden;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+.text-ellipsis-3 {
+    overflow: hidden;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+.glass-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px -10px rgba(255, 183, 206, 0.25);
+    }
+}

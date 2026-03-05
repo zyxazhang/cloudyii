@@ -8,7 +8,6 @@
 import { ref, onMounted } from 'vue'
 import { getStoredTheme, toggleTheme } from '../utils/theme'
 
-const emit = defineEmits(['theme-changed'])
 const currentTheme = ref('')
 
 onMounted(() => {
@@ -19,7 +18,5 @@ onMounted(() => {
 const handleToggleTheme = () => {
     // 切换主题并更新显示
     currentTheme.value = toggleTheme()
-    // 发送主题变化事件
-    emit('theme-changed', currentTheme.value)
 }
 </script>

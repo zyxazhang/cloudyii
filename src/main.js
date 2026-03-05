@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import '@/styles/reset.css'
-import { initTheme } from './utils/theme'
+import '@/styles/custom.css'
+import { initTheme } from '@/utils/theme'
 
 // 初始化主题
 initTheme()
