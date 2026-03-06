@@ -9,7 +9,10 @@
             </div>
         </aside>
         <div class="home-center">
-            <div class="banner glass-card"></div>
+            <div class="banner">
+                <div class="banner-mask"></div>
+                <img class="banner-img" src="../../assets/images/banner.jpg" alt="" />
+            </div>
         </div>
         <aside class="home-right">
             <div class="message-board glass-card"></div>
@@ -42,6 +45,30 @@ import ToolBox from '@/components/ToolBox.vue'
             width: 100%;
             height: 256px;
             border-radius: 1.5rem;
+            overflow: hidden;
+            position: relative;
+            .banner-mask {
+                position: absolute;
+                z-index: 20;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(to right, #ffb7cecc, transparent);
+            }
+            .banner-img {
+                position: relative;
+                z-index: 10;
+                width: 100%;
+                height: 100%;
+                transition: all 0.5s;
+                object-fit: cover;
+            }
+            &:hover {
+                .banner-img {
+                    transform: scale(1.05);
+                }
+            }
         }
     }
     .home-right {
