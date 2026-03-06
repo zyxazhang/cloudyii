@@ -20,6 +20,9 @@
                 <div class="login">登录</div>
             </div>
         </header>
+        <div class="pages-container">
+            <router-view></router-view>
+        </div>
         <!-- <ThemeSwitch /> -->
     </main>
 </template>
@@ -46,14 +49,16 @@ const navList = ref([
     .layout-header {
         width: 1376px;
         height: 74px;
-        margin: 0 auto;
+        margin: 0 auto 2rem;
         position: sticky;
+        z-index: 100;
         top: 2rem;
         border-radius: 1.5rem;
         padding: 1rem 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        backdrop-filter: blur(12px);
         .logo {
             --tw-text-opacity: 1;
             color: rgb(255 183 206 / var(--tw-text-opacity, 1));
@@ -160,6 +165,12 @@ const navList = ref([
                 }
             }
         }
+    }
+    .pages-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        box-sizing: border-box;
     }
 }
 </style>

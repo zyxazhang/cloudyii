@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>稍等一下哦～网站正在建设中✨</title>
+        <style>
+            /* 全局样式重置 */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            }
+
+            /* 页面主体样式 */
+            body {
+                background-color: #fdf2f8;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                color: #4a5568;
+                padding: 20px;
+            }
+
+            /* 可爱的加载动画 */
+            .loader {
+                width: 60px;
+                height: 60px;
+                border: 6px solid #fef7fb;
+                border-top: 6px solid #ed8936;
+                border-radius: 50%;
+                animation: spin 1.2s ease-in-out infinite;
+                margin-bottom: 30px;
+                box-shadow: 0 4px 12px rgba(237, 137, 54, 0.2);
+            }
+
+            /* 旋转动画 */
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            /* 标题样式 */
+            .title {
+                font-size: 24px;
+                color: #2d3748;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            /* 装饰图标 */
+            .title::before {
+                content: '✨';
+                font-size: 28px;
+            }
+
+            /* 描述文本 */
+            .description {
+                font-size: 16px;
+                color: #718096;
+                text-align: center;
+                line-height: 1.6;
+                max-width: 500px;
+                margin-bottom: 20px;
+            }
+
+            /* 可爱的小装饰 */
+            .decor {
+                font-size: 40px;
+                margin: 10px 0;
+            }
+
+            /* 底部提示 */
+            .footer-tip {
+                font-size: 14px;
+                color: #a0aec0;
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #fff;
+                border-radius: 20px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 加载动画 -->
+        <div class="loader"></div>
+
+        <!-- 标题 -->
+        <h1 class="title">网站正在可爱建设中～</h1>
+
+        <!-- 装饰元素 -->
+        <div class="decor">🎀</div>
+
+        <!-- 描述文本 -->
+        <p class="description">
+            抱歉啦～我们正在努力完善网站内容<br />
+            请稍等片刻，马上就和你见面啦 💖<br />
+            感谢你的耐心等待～
+        </p>
+
+        <!-- 底部提示 -->
+        <div class="footer-tip">小提示：刷新页面可能会有惊喜哦～</div>
+    </body>
+</html>

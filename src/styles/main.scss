@@ -6,9 +6,10 @@ html {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    min-width: 1400px;
+    min-width: 1440px;
     background: var(--color-theme-bg);
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 body {
@@ -22,7 +23,8 @@ body {
 
 #app {
     height: 100vh;
-    width: 100%;
+    min-width: 1440px;
+    overflow: auto;
 }
 
 // 示例组件样式（使用 SCSS + CSS 变量）
