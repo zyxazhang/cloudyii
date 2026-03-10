@@ -6,24 +6,39 @@
 }
 
 /* 仅作用于 class 为 scroll-box 的容器 */
-.scroll-box {
-    overflow: auto; /* 必须开启 overflow: auto/scroll，否则滚动条不渲染 */
+/* 全局滚动条样式 - 适配Chrome/Safari/Edge */
+::-webkit-scrollbar {
+    width: 8px; /* 竖滚动条宽度 */
+    height: 8px; /* 横滚动条高度 */
 }
 
-.scroll-box::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+    background: #fff9f2; /* 奶油白底色 */
+    border-radius: 4px; /* 圆润边角 */
 }
-.scroll-box::-webkit-scrollbar-track {
-    background: #eee;
-    border-radius: 3.5px;
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    background: #f8e2e8; /* 浅粉色滑块 */
+    border-radius: 4px; /* 超大圆角，匹配整体风格 */
+    transition: all 0.2s ease;
 }
-.scroll-box::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 3.5px;
+
+/* 滑块hover效果 */
+::-webkit-scrollbar-thumb:hover {
+    background: #f6c8d8; /* 浅粉强调色，hover变深一点 */
 }
-.scroll-box::-webkit-scrollbar-thumb:hover {
-    background: #999;
+
+/* 滚动条角落（横竖交汇处） */
+::-webkit-scrollbar-corner {
+    background: #fff9f2; /* 奶油白，和轨道一致 */
+}
+
+/* Firefox浏览器适配 */
+* {
+    scrollbar-width: thin; /* 细滚动条 */
+    scrollbar-color: #f8e2e8 #fff9f2; /* 滑块颜色 轨道颜色 */
 }
 
 .empty {

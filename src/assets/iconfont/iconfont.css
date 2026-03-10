@@ -1,8 +1,8 @@
 @font-face {
   font-family: "cloudyii"; /* Project id 5133801 */
-  src: url('iconfont.woff2?t=1772719377789') format('woff2'),
-       url('iconfont.woff?t=1772719377789') format('woff'),
-       url('iconfont.ttf?t=1772719377789') format('truetype');
+  src: url('iconfont.woff2?t=1773041074336') format('woff2'),
+       url('iconfont.woff?t=1773041074336') format('woff'),
+       url('iconfont.ttf?t=1773041074336') format('truetype');
 }
 
 .cloudyii {
@@ -11,6 +11,46 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-qq:before {
+  content: "\e663";
+}
+
+.icon-icon-user:before {
+  content: "\e677";
+}
+
+.icon-mima:before {
+  content: "\e614";
+}
+
+.icon-youxiang:before {
+  content: "\e69d";
+}
+
+.icon-gitee:before {
+  content: "\e63b";
+}
+
+.icon-juejin:before {
+  content: "\e610";
+}
+
+.icon-github:before {
+  content: "\e6b7";
+}
+
+.icon-xingxing1:before {
+  content: "\e75b";
+}
+
+.icon-yanzhengma:before {
+  content: "\e60a";
+}
+
+.icon-tubiao_queren:before {
+  content: "\e601";
 }
 
 .icon-duxiaoshuo:before {
