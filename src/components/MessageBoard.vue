@@ -13,26 +13,18 @@
         </ul>
     </div>
 </template>
-
 <script setup>
-import { ref } from 'vue'
 
-const messageList = ref([
-    { name: '颜色选择', key: '', icon: 'icon-yanse', color: '#f3e5f5' },
-    { name: '白噪音', key: '', icon: 'icon-yinle', color: '#e8f6f3' },
-    { name: '手账本', key: '', icon: 'icon-icon', color: '#e3f2fd' },
-    { name: '导航', key: '', icon: 'icon-zhinanzhen', color: '#ffcada' },
-])
 </script>
 
 <style lang="scss" scoped>
-.message-box {
+.tool-box {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1.5rem;
-    .message-box-title {
+    .tool-box-title {
         width: 100%;
         height: 24px;
         font-size: 16px;
@@ -45,12 +37,12 @@ const messageList = ref([
             margin-left: 6px;
         }
     }
-    .message-list {
+    .tool-list {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
-        .message-item {
+        .tool-item {
             width: 128px;
             height: 64px;
             border-radius: 16px;
@@ -67,17 +59,17 @@ const messageList = ref([
                 left: 0;
                 height: 100%;
                 width: 100%;
-                background-color: var(--message-color);
+                background-color: var(--tool-color);
                 transition: all 0.2s;
                 z-index: 10;
                 opacity: 0.5;
             }
-            .message-icon {
+            .tool-icon {
                 position: relative;
                 font-size: 20px;
                 z-index: 20;
             }
-            .message-text {
+            .tool-text {
                 position: relative;
                 font-size: 12px;
                 z-index: 20;

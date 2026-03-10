@@ -61,9 +61,16 @@
                     </li>
                 </ul>
             </div>
+            <div class="select-box">
+                <button class="select-btn selected">最新博文</button>
+                <button class="select-btn">精选集</button>
+            </div>
+            <div class="article-list"></div>
         </div>
         <aside class="home-right">
-            <div class="message-board glass-card"></div>
+            <div class="message-board glass-card">
+                <message-board></message-board>
+            </div>
         </aside>
     </div>
 
@@ -84,6 +91,7 @@
 <script setup>
 import ProfileCard from '@/components/ProfileCard.vue'
 import ToolBox from '@/components/ToolBox.vue'
+import MessageBoard from '@/components/MessageBoard.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -129,7 +137,7 @@ import ToolBox from '@/components/ToolBox.vue'
             }
             &:hover {
                 .banner-img {
-                    transform: scale(1.05);
+                    transform: scale(1.1);
                 }
             }
             .banner-info {
@@ -295,6 +303,30 @@ import ToolBox from '@/components/ToolBox.vue'
                         }
                     }
                 }
+            }
+        }
+        .select-box {
+            width: 100%;
+            height: 36px;
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            .select-btn {
+                color: var(--color-theme-text);
+                background-color: #ffffff80;
+                padding: 8px 24px;
+                border-radius: 18px;
+                cursor: pointer;
+                transition: all 0.5s ease-in;
+                &:hover {
+                    opacity: 0.8;
+                    // background-color: ;
+                }
+            }
+            .selected {
+                color: #ffffff;
+                background-color: var(--color-theme-text);
             }
         }
     }
