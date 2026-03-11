@@ -19,7 +19,10 @@
                     <div class="entry">立即阅读</div>
                 </div>
             </div>
-
+            <div class="select-box">
+                <button class="select-btn selected">最新博文</button>
+                <button class="select-btn">精选集</button>
+            </div>
             <div class="article-content">
                 <!-- 博文 -->
                 <ul class="latest-article">
@@ -61,10 +64,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="select-box">
-                <button class="select-btn selected">最新博文</button>
-                <button class="select-btn">精选集</button>
-            </div>
+
             <div class="article-list"></div>
         </div>
         <aside class="home-right">
@@ -91,7 +91,7 @@
 <script setup>
 import ProfileCard from '@/components/ProfileCard.vue'
 import ToolBox from '@/components/ToolBox.vue'
-import MessageBoard from '@/components/MessageBoard.vue';
+import MessageBoard from '@/components/MessageBoard.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -308,7 +308,7 @@ import MessageBoard from '@/components/MessageBoard.vue';
         .select-box {
             width: 100%;
             height: 36px;
-            margin-top: 32px;
+            margin: 32px auto;
             display: flex;
             align-items: center;
             gap: 16px;
