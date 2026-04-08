@@ -14,7 +14,16 @@
     </div>
 </template>
 <script setup>
+import { ref } from 'vue'
 
+const messageList = ref([
+    { name: '在线工具', icon: 'icon-gongju', color: '#ff6b6b' },
+    { name: '在线工具', icon: 'icon-gongju', color: '#ff6b6b' },
+    { name: '在线工具', icon: 'icon-gongju', color: '#ff6b6b' },
+    { name: '在线工具', icon: 'icon-gongju', color: '#ff6b6b' },
+    { name: '在线工具', icon: 'icon-gongju', color: '#ff6b6b' },
+    { name: '在线工具', icon: 'icon-gongju', color: '#ff6b6b' },
+])
 </script>
 
 <style lang="scss" scoped>

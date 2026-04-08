@@ -17,19 +17,21 @@
                     <input class="search-input" type="text" placeholder="搜索点什么..." />
                     <span class="cloudyii search-icon icon-sousuo"></span>
                 </div>
-                <div class="login">登录</div>
+                <div class="login" @click="login">登录</div>
             </div>
         </header>
         <div class="pages-container">
             <router-view></router-view>
         </div>
-        <!-- <ThemeSwitch /> -->
     </main>
+    <!-- <LoginBox /> -->
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, defineAsyncComponent } from 'vue'
 import { useRouter } from 'vue-router'
+import api from '@/api'
+const LoginBox = defineAsyncComponent(() => import('@/components/LoginBox.vue'))
 
 const router = useRouter()
 
@@ -40,6 +42,15 @@ const navList = ref([
     { title: '工具箱', key: '4' },
     { title: '留言板', key: '5' },
 ])
+
+const login = () => {
+    api.userLogin({ username: 'admin2', password: '123456' }).then((res) => {
+        console.log(res)
+        if (res.code === 200) {
+            localStorage.setItem('token', res.data.token)
+        }
+    })
+}
 
 const changeNav = (name) => {
     router.push({

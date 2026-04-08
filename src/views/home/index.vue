@@ -29,32 +29,32 @@
             <div class="article-content">
                 <!-- 博文 -->
                 <ul class="latest-article">
-                    <li class="list-item glass-card" v-for="value in 3">
+                    <li class="list-item glass-card" v-for="article in articleList" :key="article.id">
                         <div class="article-box">
-                            <img class="article-img" src="../../assets/images/banner-02.jpg" alt="" />
+                            <img v-if="article.cover_image" class="article-img" :src="article.cover_image" alt="" />
+                            <img v-else class="article-img" src="../../assets/images/banner-04.jpg" alt="" />
                             <div class="article-info">
                                 <div class="top">
-                                    <div class="type">小说</div>
-                                    <div class="time">2026-03-09</div>
+                                    <div class="type">{{ article.category_name }}</div>
+                                    <div class="time">{{ article.create_time }}</div>
                                 </div>
-                                <div class="title">韵体萌心</div>
+                                <div class="title text-ellipsis-1">{{ article.title }}</div>
                                 <div class="desc text-ellipsis-2">
-                                    “灵悦”
-                                    是系统幻化的白狐名字，它在云璃最脆弱和迷茫的时候出现，给予陪伴与鼓励。这个标题强调灵悦在云璃修仙之路上的重要陪伴作用，象征着希望与温暖，是云璃前行的动力之一
+                                    {{ article.summary }}
                                 </div>
                                 <div class="bottom">
                                     <div class="other">
                                         <div class="other-box like">
                                             <span class="cloudyii icon-aixin1"></span>
-                                            <span class="num">562</span>
+                                            <span class="num">{{ article.view_count }}</span>
                                         </div>
                                         <div class="other-box comment">
                                             <span class="cloudyii icon-pinglun-"></span>
-                                            <span class="num">56</span>
+                                            <span class="num">{{ article.comment_count || 0 }}</span>
                                         </div>
                                         <div class="other-box collect">
                                             <span class="cloudyii icon-biaoqian1"></span>
-                                            <span class="num">156</span>
+                                            <span class="num">{{ article.collect_count || 0 }}</span>
                                         </div>
                                     </div>
                                     <div class="tags">
@@ -92,10 +92,25 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import ProfileCard from '@/components/ProfileCard.vue'
 import ToolBox from '@/components/ToolBox.vue'
 import MessageBoard from '@/components/MessageBoard.vue'
 import ThemeSwitch from '@/components/ThemeSwitch.vue'
+import api from '@/api'
+
+const articleList = ref([])
+
+const getArticleList = () => {
+    api.getArticleList({ status: 1 }).then((res) => {
+        console.log(res)
+        if (res.code === 200) {
+            articleList.value = res.data.list
+        }
+    })
+}
+
+getArticleList()
 </script>
 
 <style lang="scss" scoped>
@@ -253,6 +268,7 @@ import ThemeSwitch from '@/components/ThemeSwitch.vue'
                                 cursor: pointer;
                                 transition: all 0.5s ease;
                                 font-weight: 500;
+
                                 &:hover {
                                     color: var(--color-theme-text);
                                 }
