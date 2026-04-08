@@ -1,7 +1,7 @@
 // 主题类型定义
 export const THEME_TYPES = {
     DEFAULT: 'default',
-    DARK: 'dark',
+    BULE: 'blue',
 }
 
 // 获取本地存储的主题
@@ -39,7 +39,7 @@ export const initTheme = () => {
 // 切换主题（默认在默认/暗黑之间切换）
 export const toggleTheme = () => {
     const currentTheme = getStoredTheme()
-    const newTheme = currentTheme === THEME_TYPES.DEFAULT ? THEME_TYPES.DARK : THEME_TYPES.DEFAULT
+    const newTheme = currentTheme === THEME_TYPES.DEFAULT ? THEME_TYPES.BULE : THEME_TYPES.DEFAULT
     setTheme(newTheme)
     return newTheme
 }

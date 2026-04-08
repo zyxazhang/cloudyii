@@ -86,7 +86,7 @@
         text-align: center;
     }
     .text {
-        color: #ffb7cecc;
+        color: var(--color-linear-gradient);
         letter-spacing: 0.1em;
         font-style: italic;
         font-size: 0.75rem;

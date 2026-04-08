@@ -7,6 +7,9 @@
             <div class="aside-container glass-card">
                 <tool-box></tool-box>
             </div>
+            <div class="aside-container glass-card">
+                <theme-switch></theme-switch>
+            </div>
         </aside>
         <div class="home-center">
             <div class="banner">
@@ -92,6 +95,7 @@
 import ProfileCard from '@/components/ProfileCard.vue'
 import ToolBox from '@/components/ToolBox.vue'
 import MessageBoard from '@/components/MessageBoard.vue'
+import ThemeSwitch from '@/components/ThemeSwitch.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -125,7 +129,7 @@ import MessageBoard from '@/components/MessageBoard.vue'
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: linear-gradient(to right, #ffb7cecc, transparent);
+                background-image: linear-gradient(to right, var(--color-linear-gradient), transparent);
             }
             .banner-img {
                 position: absolute;

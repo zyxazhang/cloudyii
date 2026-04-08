@@ -1,6 +1,6 @@
 <template>
     <button class="btn" @click="handleToggleTheme">
-        {{ currentTheme === 'dark' ? '切换到默认主题' : '切换到暗黑主题' }}
+        {{ currentTheme === 'blue' ? '切换到女生主题' : '切换到男生主题' }}
     </button>
 </template>
 

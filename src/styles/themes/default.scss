@@ -5,7 +5,14 @@
     --color-text: #7d6e6e;
     --color-bg: #ffffff;
     --color-border: #e5e7eb;
-    // 主题背景
+    // 主题文字
     --color-theme-text: #ffb7ce;
+    // 主题文字背景
+    --color-theme-text-bg: #ffecf2;
+    // 文字渐变
+    --color-linear-gradient: #ffb7cecc;
+    // glass
+    --color-box-shadow: #ffb7ce40;
+    // 主题整体背景
     --color-theme-bg: linear-gradient(135deg, #FFFDF9 0%, #FFECF2 50%, #F3E5F5 100%);
 }

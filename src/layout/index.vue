@@ -9,7 +9,7 @@
             </div>
             <nav class="nav-list">
                 <li class="nav-item" v-for="nav in navList" :key="nav.key">
-                    <a class="nav-link" href="#">{{ nav.title }}</a>
+                    <a class="nav-link" @click="changeNav(nav.key)">{{ nav.title }}</a>
                 </li>
             </nav>
             <div class="right-func">
@@ -29,15 +29,23 @@
 
 <script setup>
 import { ref } from 'vue'
-import ThemeSwitch from '@/components/ThemeSwitch.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const navList = ref([
-    { title: '首页', key: '1' },
-    { title: '小说室', key: '2' },
+    { title: '首页', key: 'home' },
+    { title: '小说室', key: 'novel' },
     { title: '日常', key: '3' },
     { title: '工具箱', key: '4' },
     { title: '留言板', key: '5' },
 ])
+
+const changeNav = (name) => {
+    router.push({
+        name,
+    })
+}
 </script>
 
 <style lang="scss" scoped>
@@ -61,14 +69,14 @@ const navList = ref([
         backdrop-filter: blur(12px);
         .logo {
             --tw-text-opacity: 1;
-            color: rgb(255 183 206 / var(--tw-text-opacity, 1));
+            color: var(--color-theme-text);
             display: flex;
             gap: 0.5rem;
             align-items: center;
             .logo-image {
                 width: 2.5rem;
                 height: 2.5rem;
-                background-color: rgb(255 236 242 / var(--tw-bg-opacity, 1));
+                background-color: var(--color-theme-text-bg);
                 border-radius: 50%;
                 line-height: 2.5rem;
                 text-align: center;
@@ -101,7 +109,7 @@ const navList = ref([
                         left: 50%;
                         width: 0;
                         height: 3px;
-                        background: #ffb7ce;
+                        background: var(--color-theme-text);
                         border-radius: 10px;
                         transition: all 0.3s;
                         transform: translateX(-50%);
@@ -152,15 +160,15 @@ const navList = ref([
                 width: 80px;
                 height: 2.5rem;
                 border-radius: 1.25rem;
-                background-color: #ffecf2;
+                background-color: var(--color-theme-text-bg);
                 text-align: center;
                 line-height: 2.5rem;
-                color: #ffb7ce;
+                color: var(--color-theme-text);
                 font-weight: bold;
                 cursor: pointer;
                 transition: all 0.3s;
                 &:hover {
-                    background: #ffb7ce;
+                    background: var(--color-theme-text);
                     color: #fff;
                 }
             }
